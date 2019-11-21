@@ -1,0 +1,24 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}History{% endblock %}
+
+{% block body %}
+    <h1>History</h1>
+
+    <table>
+        <thead>
+        <tr>
+            <th>Message</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for event in history %}
+            <tr>
+                <td>
+                    {{ event.message }}
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}
